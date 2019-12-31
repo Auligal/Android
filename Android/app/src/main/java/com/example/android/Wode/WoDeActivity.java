@@ -12,6 +12,8 @@ import com.example.android.Wode.recy1.Icon1;
 import com.example.android.Wode.recy1.IconAdapter1;
 import com.example.android.Wode.recy2.Icon2;
 import com.example.android.Wode.recy2.IconAdapter2;
+import com.example.android.Wode.recy3.Icon3;
+import com.example.android.Wode.recy3.IconAdapter3;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +21,8 @@ import java.util.List;
 public class WoDeActivity extends AppCompatActivity {
     List<Icon1> iconList1 = new ArrayList<Icon1>();
     List<Icon2> iconList2 = new ArrayList<Icon2>();
+    List<Icon3> iconList3 = new ArrayList<Icon3>();
+    List<Icon3> iconList4 = new ArrayList<Icon3>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +73,18 @@ public class WoDeActivity extends AppCompatActivity {
 //        //完成adapter设置
         recyclerView2.setAdapter(adapter2);
 
+        init2();
+        RecyclerView recyclerView3 = (RecyclerView)findViewById(R.id.recycleview_3);
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(this);
+        recyclerView3.setLayoutManager(layoutManager3);
+        IconAdapter3 adapter3 = new IconAdapter3(iconList3);
+        recyclerView3.setAdapter(adapter3);
+
+        RecyclerView recyclerView4 = (RecyclerView)findViewById(R.id.recycleview_4);
+        LinearLayoutManager layoutManager4 = new LinearLayoutManager(this);
+        recyclerView4.setLayoutManager(layoutManager4);
+        IconAdapter3 adapter4 = new IconAdapter3(iconList4);
+        recyclerView4.setAdapter(adapter4);
     }
     private void init(){
         for (int i=0;i<5;i++) {
@@ -97,5 +113,23 @@ public class WoDeActivity extends AppCompatActivity {
         iconList2.add(d);
         Icon2 e = new Icon2("我的收藏", R.drawable.star,"(10)");
         iconList2.add(e);
+    }
+    private void init2(){
+        Icon3 a = new Icon3(R.drawable.recycle1,"我喜欢的音乐","11首",R.drawable.button_more);
+        iconList3.add(a);
+        Icon3 b = new Icon3(R.drawable.recycle2,"神探夏洛克","11首",R.drawable.button_more);
+        iconList3.add(b);
+        Icon3 c = new Icon3(R.drawable.recycle3,"2019年年度歌单","10首",R.drawable.button_more);
+        iconList3.add(c);
+        Icon3 d = new Icon3(R.drawable.recycle4,"牛奶咖啡","51首",R.drawable.button_more);
+        iconList3.add(d);
+        Icon3 e = new Icon3(R.drawable.recycle5,"女声控|那些一曲惊人的古风歌","11首",R.drawable.button_more);
+        iconList4.add(e);
+        Icon3 f = new Icon3(R.drawable.recycle6,"感动心灵的99首ACG旋律","99首",R.drawable.button_more);
+        iconList4.add(f);
+        Icon3 g = new Icon3(R.drawable.recycle7,"mine","76首",R.drawable.button_more);
+        iconList4.add(g);
+        Icon3 h = new Icon3(R.drawable.recycle8,"lings","23首",R.drawable.button_more);
+        iconList4.add(h);
     }
 }

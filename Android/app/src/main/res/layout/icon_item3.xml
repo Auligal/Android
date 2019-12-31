@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="78dp"
+    android:orientation="horizontal"
+    tools:context=".Wode.WoDeActivity"
+    android:padding="5dp">
+    <ImageView
+        android:id="@+id/icon_image3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:paddingTop="19dp"
+        android:layout_marginStart="13dp"
+        android:id="@+id/icon_name3"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:textSize="10dp"
+        android:id="@+id/icon_num3"
+        android:paddingTop="19dp"
+        android:paddingStart="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_gravity="center_vertical"/>
+
+    <ImageView
+        android:id="@+id/icon_image_more3"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="280dp" />
+</LinearLayout>

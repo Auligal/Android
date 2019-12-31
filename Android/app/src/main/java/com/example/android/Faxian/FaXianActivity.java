@@ -62,7 +62,7 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         //新建List
         data_list = new ArrayList<Map<String, Object>>();
         //获取数据
-        getData();
+        data_list = getData();
         //新建适配器
         String [] from ={"image","text"};
         int [] to = {R.id.image,R.id.text};

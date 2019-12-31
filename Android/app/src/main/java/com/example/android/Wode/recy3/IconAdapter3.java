@@ -13,17 +13,17 @@ import com.example.android.R;
 
 import java.util.List;
 
-public class IconAdapter3 extends RecyclerView.Adapter<IconAdapter3.ViewHolde> {
+public class IconAdapter3 extends RecyclerView.Adapter<IconAdapter3.ViewHolder> {
     private List<Icon3> mIconList;
     @NonNull
     @Override
-    public ViewHolde onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public IconAdapter3.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.icon_item3,parent,false);
-        return new ViewHolde(v);
+        return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolde holder, int position) {
+    public void onBindViewHolder(@NonNull IconAdapter3.ViewHolder holder, int position) {
         Icon3 icon = mIconList.get(position);
         holder.imageView.setImageResource(icon.getImage1());
         holder.textView.setText(icon.getStr());
@@ -35,15 +35,15 @@ public class IconAdapter3 extends RecyclerView.Adapter<IconAdapter3.ViewHolde> {
     }
     @Override
     public int getItemCount() {
-        return 0;
+        return mIconList.size();
     }
 
-    static class ViewHolde extends RecyclerView.ViewHolder{
+    static class ViewHolder extends RecyclerView.ViewHolder{
         TextView textView;
         ImageView imageView;
         TextView textView2;
         ImageView imageView2;
-        public ViewHolde(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.icon_image3);
             textView = itemView.findViewById(R.id.icon_name3);

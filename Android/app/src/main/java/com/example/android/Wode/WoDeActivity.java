@@ -4,9 +4,14 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
+
+import com.example.android.Faxian.FaXianActivity;
 import com.example.android.R;
 import com.example.android.Wode.recy1.Icon1;
 import com.example.android.Wode.recy1.IconAdapter1;
@@ -72,19 +77,33 @@ public class WoDeActivity extends AppCompatActivity {
         IconAdapter2 adapter2 = new IconAdapter2(iconList2);
 //        //完成adapter设置
         recyclerView2.setAdapter(adapter2);
-
+//我的界面的创建歌单recycleview设置适配器
         init2();
         RecyclerView recyclerView3 = (RecyclerView)findViewById(R.id.recycleview_3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this);
         recyclerView3.setLayoutManager(layoutManager3);
         IconAdapter3 adapter3 = new IconAdapter3(iconList3);
         recyclerView3.setAdapter(adapter3);
-
+//我的界面的收藏的歌单recycleview设置适配器
         RecyclerView recyclerView4 = (RecyclerView)findViewById(R.id.recycleview_4);
         LinearLayoutManager layoutManager4 = new LinearLayoutManager(this);
         recyclerView4.setLayoutManager(layoutManager4);
         IconAdapter3 adapter4 = new IconAdapter3(iconList4);
         recyclerView4.setAdapter(adapter4);
+//我的界面的底部音乐播放界面
+//        TextView musicname = findViewById(R.id.bottomnavigationview_music_name);
+//        musicname.setText("追梦赤子心");
+//        TextView musicauthor = findViewById(R.id.bottomnavigationview_music_author);
+//        musicauthor.setText("GALA");
+        //toolbar顶部跳转设置
+        TextView find_title = findViewById(R.id.find_title);
+        find_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WoDeActivity.this, FaXianActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void init(){
         for (int i=0;i<5;i++) {
@@ -115,14 +134,12 @@ public class WoDeActivity extends AppCompatActivity {
         iconList2.add(e);
     }
     private void init2(){
-        Icon3 a = new Icon3(R.drawable.recycle1,"我喜欢的音乐","11首",R.drawable.button_more);
+        Icon3 a = new Icon3(R.drawable.recycle2,"我喜欢的音乐","11首",R.drawable.button_more);
         iconList3.add(a);
         Icon3 b = new Icon3(R.drawable.recycle2,"神探夏洛克","11首",R.drawable.button_more);
         iconList3.add(b);
-        Icon3 c = new Icon3(R.drawable.recycle3,"2019年年度歌单","10首",R.drawable.button_more);
+        Icon3 c = new Icon3(R.drawable.recycle2,"2019年年度歌单","10首",R.drawable.button_more);
         iconList3.add(c);
-        Icon3 d = new Icon3(R.drawable.recycle4,"牛奶咖啡","51首",R.drawable.button_more);
-        iconList3.add(d);
         Icon3 e = new Icon3(R.drawable.recycle5,"女声控|那些一曲惊人的古风歌","11首",R.drawable.button_more);
         iconList4.add(e);
         Icon3 f = new Icon3(R.drawable.recycle6,"感动心灵的99首ACG旋律","99首",R.drawable.button_more);

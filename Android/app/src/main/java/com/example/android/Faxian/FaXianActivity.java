@@ -1,16 +1,23 @@
 package com.example.android.Faxian;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.android.R;
+import com.example.android.Wode.WoDeActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -29,7 +36,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
    // private ArrayList<String> list_path;
     private ArrayList<Integer> list_path = new ArrayList<>();
     private ArrayList<String> list_title;
-
     //推荐歌单GridView
     private GridView gview;
     private List<Map<String, Object>> data_list;
@@ -64,6 +70,15 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         //配置适配器
         gview.setAdapter(sim_adapter);
 
+        //toolbar顶部跳转设置
+        TextView mine_title = findViewById(R.id.mine_title);
+        mine_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FaXianActivity.this, WoDeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void initView() {
         banner = (Banner) findViewById(R.id.banner_faxian);

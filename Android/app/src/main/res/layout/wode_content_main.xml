@@ -59,9 +59,10 @@
         android:id="@+id/created_menu_button_add"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:background="@drawable/button_add"
         android:layout_marginTop="10dp"
+        android:background="@drawable/button_add"
         app:layout_constraintBottom_toTopOf="@+id/recycleview_3"
+        app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintLeft_toRightOf="@id/created_menu_Text_numer"
         app:layout_constraintRight_toLeftOf="@+id/created_menu_button_more"
         app:layout_constraintTop_toBottomOf="@+id/recycleview_2"
@@ -71,16 +72,16 @@
         android:id="@+id/created_menu_button_more"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:background="@drawable/button_more"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/button_more"
         app:layout_constraintBottom_toTopOf="@+id/recycleview_3"
-        app:layout_constraintLeft_toRightOf="@id/created_menu_button_add"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recycleview_2"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recycleview_3"
         android:layout_marginStart="15dp"
@@ -117,28 +118,34 @@
         android:id="@+id/saved_menu_Text_numer"
         app:layout_constraintTop_toBottomOf="@+id/recycleview_3"
         app:layout_constraintLeft_toRightOf="@+id/saved_menu_Text" />
+
     <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
         android:id="@+id/saved_menu_button_add"
-        android:background="@drawable/button_add"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/recycleview_4"
-        app:layout_constraintRight_toLeftOf="@+id/saved_menu_button_more"
-        app:layout_constraintLeft_toRightOf="@+id/saved_menu_Text_numer"
-        app:layout_constraintTop_toBottomOf="@+id/recycleview_3" />
-    <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/button_add"
+        app:layout_constraintBottom_toTopOf="@+id/recycleview_4"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintLeft_toRightOf="@+id/saved_menu_Text_numer"
+        app:layout_constraintRight_toLeftOf="@+id/saved_menu_button_more"
+        app:layout_constraintTop_toBottomOf="@+id/recycleview_3"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <ImageView
         android:id="@+id/saved_menu_button_more"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/button_more"
-        app:layout_constraintLeft_toRightOf="@id/saved_menu_button_add"
         app:layout_constraintBottom_toTopOf="@+id/recycleview_4"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recycleview_3"/>
+        app:layout_constraintTop_toBottomOf="@+id/recycleview_3"
+        app:layout_constraintVertical_bias="0.324" />
+
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/recycleview_4"
         android:layout_marginStart="15dp"

@@ -44,10 +44,10 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
 //        list_path.add(R.drawable.banner2);
 //        list_path.add(R.drawable.banner3);
 //        list_path.add(R.drawable.banner4);
-        list_title.add("好好学习");
-        list_title.add("天天向上");
-        list_title.add("热爱劳动");
-        list_title.add("不搞对象");
+        list_title.add("张韶涵世界巡回演唱会");
+        list_title.add("TaylorSwift");
+        list_title.add("Kris新歌");
+        list_title.add("陈奕迅-明报");
         //设置内置样式，共有六种可以点入方法内逐一体验使用。
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         //设置图片加载器，图片加载器在下方

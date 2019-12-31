@@ -3,7 +3,9 @@ package com.example.android.Faxian;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.SimpleAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,17 +19,51 @@ import com.youth.banner.loader.ImageLoader;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class FaXianActivity extends AppCompatActivity implements OnBannerListener {
+    //轮播
     private Banner banner;
    // private ArrayList<String> list_path;
     private ArrayList<Integer> list_path = new ArrayList<>();
     private ArrayList<String> list_title;
+
+    //推荐歌单GridView
+    private GridView gview;
+    private List<Map<String, Object>> data_list;
+    private SimpleAdapter sim_adapter;
+    // 图片封装为一个数组
+    private int[] icon = { R.drawable.dzq, R.drawable.ys, R.drawable.ljj,
+            R.drawable.zjl, R.drawable.yl, R.drawable.hzw};
+    private String[] iconName = {
+            "[华语速爆新歌]最新华语音乐推荐",
+            "且随疾风前行，身后亦需留心",
+            "回忆杀系列",
+            "这是你的告白气球吗",
+            "听了心情会变好的欢快古风小调",
+            "海贼王经典曲目"
+    };
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faxian);
         initView();
+        gview = (GridView) findViewById(R.id.gridview_tjgd);
+        //新建List
+        data_list = new ArrayList<Map<String, Object>>();
+        //获取数据
+        getData();
+        //新建适配器
+        String [] from ={"image","text"};
+        int [] to = {R.id.image,R.id.text};
+        sim_adapter = new SimpleAdapter(this, data_list, R.layout.item_tjgd, from, to);
+        //配置适配器
+        gview.setAdapter(sim_adapter);
+
     }
     private void initView() {
         banner = (Banner) findViewById(R.id.banner_faxian);
@@ -100,4 +136,17 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
 
         }
     }
+
+    public List<Map<String, Object>> getData(){
+        //cion和iconName的长度是相同的，这里任选其一都可以
+        for(int i=0;i<icon.length;i++){
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("image", icon[i]);
+            map.put("text", iconName[i]);
+            data_list.add(map);
+        }
+
+        return data_list;
+    }
+
 }

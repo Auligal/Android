@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bottom_controller"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:background="#CCffffff">
+
+    <TextView
+        android:id="@+id/tv_gap"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f0f0f0" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_gap">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/record" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_controller"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_bottom_controller" />
+
+        <ImageView
+            android:id="@+id/iv_bottom_play"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/iv_bottom_controller"
+            android:src="@drawable/play_button" />
+
+        <LinearLayout
+            android:id="@+id/ll_songinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@id/iv_bottom_play"
+            android:layout_toEndOf="@id/iv_cover"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_songname"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="还没有歌曲哦~"
+                android:textColor="#333333"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tv_singer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:ellipsize="end"
+                android:gravity="top"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="快来找一首歌听吧~"
+                android:textColor="#838383"
+                android:textSize="10dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

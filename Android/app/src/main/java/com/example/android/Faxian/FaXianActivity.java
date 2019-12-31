@@ -1,4 +1,4 @@
-package com.example.android;
+package com.example.android.Faxian;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.android.R;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -74,9 +75,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
     /**
      * 通过文件名获取资源id 例子：getResId("icon", R.drawable.class);
      *
-     * @param variableName
-     * @param c
-     * @return
      */
     public static int getResId(String variableName, Class<?> c) {
         try {

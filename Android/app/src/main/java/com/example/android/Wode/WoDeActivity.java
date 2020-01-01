@@ -150,23 +150,23 @@ public class WoDeActivity extends AppCompatActivity {
         }
     }
     private void init1(){
-        Icon2 a = new Icon2("本地音乐", R.drawable.music,"(12)");
+        Icon2 a = new Icon2("本地音乐", R.drawable.r2_1,"(12)");
         iconList2.add(a);
-        Icon2 b = new Icon2("最近播放", R.drawable.play,"(23)");
+        Icon2 b = new Icon2("最近播放", R.drawable.r2_2,"(23)");
         iconList2.add(b);
-        Icon2 c = new Icon2("下载管理", R.drawable.download,"(34)");
+        Icon2 c = new Icon2("下载管理", R.drawable.r2_3,"(34)");
         iconList2.add(c);
-        Icon2 d = new Icon2("我的电台", R.drawable.diantai,"(17)");
+        Icon2 d = new Icon2("我的电台", R.drawable.r2_4,"(17)");
         iconList2.add(d);
-        Icon2 e = new Icon2("我的收藏", R.drawable.star,"(10)");
+        Icon2 e = new Icon2("我的收藏", R.drawable.r2_5,"(10)");
         iconList2.add(e);
     }
     private void init2(){
-        Icon3 a = new Icon3(R.drawable.recycle2,"我喜欢的音乐","11首",R.drawable.button_more);
+        Icon3 a = new Icon3(R.drawable.love,"我喜欢的音乐","11首",R.drawable.button_more);
         iconList3.add(a);
         Icon3 b = new Icon3(R.drawable.recycle2,"神探夏洛克","11首",R.drawable.button_more);
         iconList3.add(b);
-        Icon3 c = new Icon3(R.drawable.recycle2,"2019年年度歌单","10首",R.drawable.button_more);
+        Icon3 c = new Icon3(R.drawable.zjl,"2019年年度歌单","10首",R.drawable.button_more);
         iconList3.add(c);
         Icon3 e = new Icon3(R.drawable.recycle5,"女声控|那些一曲惊人的古风歌","11首",R.drawable.button_more);
         iconList4.add(e);

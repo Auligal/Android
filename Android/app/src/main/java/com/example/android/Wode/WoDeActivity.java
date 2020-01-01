@@ -135,17 +135,17 @@ public class WoDeActivity extends AppCompatActivity {
     }
     private void init(){
         for (int i=0;i<5;i++) {
-            Icon1 a = new Icon1("QQ", R.drawable.a);
+            Icon1 a = new Icon1("光碟原声", R.drawable.r1_1);
             iconList1.add(a);
-            Icon1 b = new Icon1("Github", R.drawable.b);
+            Icon1 b = new Icon1("最嗨电音", R.drawable.r1_2);
             iconList1.add(b);
-            Icon1 c = new Icon1("QQ", R.drawable.c);
+            Icon1 c = new Icon1("电子乐器", R.drawable.r1_3);
             iconList1.add(c);
-            Icon1 d = new Icon1("Github", R.drawable.d);
+            Icon1 d = new Icon1("私藏推荐", R.drawable.r1_4);
             iconList1.add(d);
-            Icon1 e = new Icon1("QQ", R.drawable.e);
+            Icon1 e = new Icon1("直播互动", R.drawable.r1_5);
             iconList1.add(e);
-            Icon1 f = new Icon1("Github", R.drawable.f);
+            Icon1 f = new Icon1("古典专区", R.drawable.r1_6);
             iconList1.add(f);
         }
     }

@@ -176,34 +176,13 @@
                     android:layout_marginTop="320dp"
                     android:text="@string/faxian_zb" />
 
-                <TextView
-                    android:id="@+id/textView_tjgd"
-                    android:layout_width="89dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="370dp"
-                    android:maxWidth="25dp"
-                    android:maxHeight="25dp"
-                    android:text="@string/faxian_tjgd"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="33dp"
-                    android:layout_marginLeft="270dp"
-                    android:layout_marginTop="365dp"
-                    android:background="#00FFFFFF"
-                    android:text="@string/faxian_gdgc"
-                    android:textSize="13dp" />
 
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/faxian_ry"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="400dp"
+                    android:layout_marginTop="360dp"
                     android:background="#FFFFFF" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>

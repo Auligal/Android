@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     tools:context="com.example.android.Faxian.FaXianActivity">
 
-    <com.handsome.recyclerpage.View.SquareImageView
+    <com.example.android.Faxian.SquareImageView
         android:id="@+id/iv_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,14 +1,19 @@
 package com.example.android.Wode;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.android.Faxian.FaXianActivity;
@@ -23,6 +28,7 @@ import com.example.android.cloudvileage.cloudvillegActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class WoDeActivity extends AppCompatActivity {
     List<Icon1> iconList1 = new ArrayList<Icon1>();
@@ -83,20 +89,14 @@ public class WoDeActivity extends AppCompatActivity {
         RecyclerView recyclerView3 = (RecyclerView)findViewById(R.id.recycleview_3);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(this);
         recyclerView3.setLayoutManager(layoutManager3);
-        IconAdapter3 adapter3 = new IconAdapter3(iconList3);
+        IconAdapter3 adapter3 = new IconAdapter3(iconList3,WoDeActivity.this);
         recyclerView3.setAdapter(adapter3);
 //我的界面的收藏的歌单recycleview设置适配器
         RecyclerView recyclerView4 = (RecyclerView)findViewById(R.id.recycleview_4);
         LinearLayoutManager layoutManager4 = new LinearLayoutManager(this);
         recyclerView4.setLayoutManager(layoutManager4);
-        IconAdapter3 adapter4 = new IconAdapter3(iconList4);
+        IconAdapter3 adapter4 = new IconAdapter3(iconList4,WoDeActivity.this);
         recyclerView4.setAdapter(adapter4);
-//我的界面的底部音乐播放界面
-//        TextView musicname = findViewById(R.id.bottomnavigationview_music_name);
-//        musicname.setText("追梦赤子心");
-//        TextView musicauthor = findViewById(R.id.bottomnavigationview_music_author);
-//        musicauthor.setText("GALA");
-        //toolbar顶部跳转设置
         TextView find_title = findViewById(R.id.find_title);
         find_title.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,5 +157,21 @@ public class WoDeActivity extends AppCompatActivity {
         iconList4.add(g);
         Icon3 h = new Icon3(R.drawable.recycle8,"lings","23首",R.drawable.button_more);
         iconList4.add(h);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("你要离开我吗?");
+            builder.setNegativeButton("是的", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finish();
+                }
+            });
+            builder.setPositiveButton("再陪会儿",null);
+            builder.create().show();
+        }
+        return true;
     }
 }

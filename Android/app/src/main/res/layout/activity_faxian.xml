@@ -67,7 +67,10 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:descendantFocusability="blocksDescendants">
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -204,7 +207,7 @@
                     android:background="#FFFFFF" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
+            </RelativeLayout>
         </ScrollView>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

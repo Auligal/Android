@@ -77,59 +77,6 @@
             android:layout_gravity="bottom"
             android:background="@color/white"
             app:itemTextColor="@color/black" >
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="match_parent">-->
-
-<!--                <de.hdodenhof.circleimageview.CircleImageView-->
-<!--                    android:id="@+id/bottomnavigationview_circleiamgeview"-->
-<!--                    android:layout_width="38dp"-->
-<!--                    android:layout_height="38dp"-->
-<!--                    android:src="@drawable/recycle5"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toStartOf="@+id/bottomnavigationview_play"-->
-<!--                    app:layout_constraintHorizontal_bias="0.06"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:layout_constraintVertical_bias="1.0" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/bottomnavigationview_music_name"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_marginLeft="12dp"-->
-<!--                    app:layout_constraintLeft_toRightOf="@+id/bottomnavigationview_circleiamgeview"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-<!--                <TextView-->
-<!--                    android:id="@+id/bottomnavigationview_music_author"-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    app:layout_constraintLeft_toRightOf="@+id/bottomnavigationview_music_name"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/bottomnavigationview_music_name" />-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/imageView"-->
-<!--                    android:layout_width="36dp"-->
-<!--                    android:layout_height="36dp"-->
-<!--                    android:layout_marginEnd="24dp"-->
-<!--                    android:src="@drawable/bottomnavigationview_button_more"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--                <ImageView-->
-<!--                    android:id="@+id/bottomnavigationview_play"-->
-<!--                    android:layout_width="36dp"-->
-<!--                    android:layout_height="36dp"-->
-<!--                    android:layout_marginEnd="24dp"-->
-<!--                    android:src="@drawable/playbutton"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintEnd_toStartOf="@+id/imageView"-->
-<!--                    app:layout_constraintTop_toTopOf="parent" />-->
-
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

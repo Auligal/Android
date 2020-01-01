@@ -4,6 +4,13 @@
     <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- if you want to load images from a file OR from the internet -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
     <!--原来是android:theme="@style/AppTheme.NoActionBar"-->
     <application
         android:allowBackup="true"
@@ -11,13 +18,18 @@
         android:label="明德音乐盒"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".cloudvileage.cloudvillegActivity"></activity>
+        android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".Welcome.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Wode.MusicMenuActivity"
+            android:label="歌单"></activity>
+        <activity android:name=".cloudvileage.cloudvillegActivity">
+
         </activity>
         <activity android:name=".Faxian.FaXianActivity"></activity>
         <activity android:name=".Wode.WoDeActivity"></activity>

@@ -40,7 +40,7 @@
 
         </LinearLayout>
 
-        <com.handsome.recyclerpage.View.RectImageView
+        <com.example.android.Faxian.RectImageView
             android:id="@+id/iv_icon"
             android:layout_width="140dp"
             android:layout_height="wrap_content"

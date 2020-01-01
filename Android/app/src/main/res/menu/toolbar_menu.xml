@@ -6,4 +6,9 @@
         android:icon="@drawable/search"
         android:title="@string/search"
         app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/button_more"
+        android:title="@string/more"
+        app:showAsAction="ifRoom"/>
 </menu>

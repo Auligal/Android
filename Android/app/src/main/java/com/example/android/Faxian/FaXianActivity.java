@@ -1,9 +1,11 @@
 package com.example.android.Faxian;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
@@ -12,6 +14,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +25,7 @@ import com.bumptech.glide.Glide;
 import com.example.android.R;
 import com.example.android.Wode.WoDeActivity;
 import com.example.android.cloudvileage.cloudvillegActivity;
+import com.example.android.cloudvileage.recy.icon;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -147,7 +151,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
     }
     /**
      * 通过文件名获取资源id 例子：getResId("icon", R.drawable.class);
-     *
      */
     public static int getResId(String variableName, Class<?> c) {
         try {
@@ -173,8 +176,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
 
         }
     }
-
-
     /**
      * 模拟本地数据
      */
@@ -251,7 +252,4 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         String title = mList.get(position).title;
         Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
     }
-
-
-
 }

@@ -81,16 +81,14 @@
         android:layout_width="232dp"
         android:layout_height="241dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/dzq" />
-    //设置唱片圆盘
+         />
     <ImageView
         android:id="@+id/changpian"
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/hejiaochangpian" />
-    //设置圆盘上的指针
+        android:src="@drawable/hjcp1" />
     <ImageView
         android:id="@+id/zhizhen"
         android:layout_width="100dp"

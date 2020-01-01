@@ -1,8 +1,18 @@
 package com.example.android.cloudvileage;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.TextView;
+
+import com.example.android.Faxian.FaXianActivity;
 import com.example.android.R;
+import com.example.android.Wode.WoDeActivity;
 import com.example.android.cloudvileage.recy.icon;
 import com.example.android.cloudvileage.recy.iconAdapter;
 import java.util.ArrayList;
@@ -27,6 +37,23 @@ public class cloudvillegActivity extends AppCompatActivity {
         layoutManager2.setScrollEnabled(false);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView2.setLayoutManager(layoutManager2);
+
+        TextView mine_title = findViewById(R.id.mine_title);
+        mine_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(cloudvillegActivity.this, WoDeActivity.class);
+                startActivity(intent);
+            }
+        });
+        TextView find_title = findViewById(R.id.find_title);
+        find_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(cloudvillegActivity.this, FaXianActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     private void init(){
         icon a = new icon(R.drawable.cv_1,"唱歌是因为有爱,听听生活的诉说",R.drawable.person1,"阿刁121","211赞");
@@ -82,5 +109,21 @@ public class cloudvillegActivity extends AppCompatActivity {
         list2.add(x);
         list2.add(y);
         list2.add(z);
+    }
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode==KeyEvent.KEYCODE_BACK){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setMessage("你要离开我吗?");
+            builder.setNegativeButton("是的", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    finish();
+                }
+            });
+            builder.setPositiveButton("再陪会儿",null);
+            builder.create().show();
+        }
+        return true;
     }
 }

@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,6 +27,7 @@ import com.example.android.R;
 import com.example.android.Wode.WoDeActivity;
 import com.example.android.cloudvileage.cloudvillegActivity;
 import com.example.android.cloudvileage.recy.icon;
+import com.google.android.material.navigation.NavigationView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -50,10 +52,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
     private GridLayoutManager layoutManager;
     private RecyclerAdapter mAdapter;
     private static List<Music> mList;
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,11 +115,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
             //这里面的a  代表drawable里面自己放的本地图片
             list_path.add(getResId("banner" + position, R.drawable.class));
         }
-
-//        list_path.add(R.drawable.banner1);
-//        list_path.add(R.drawable.banner2);
-//        list_path.add(R.drawable.banner3);
-//        list_path.add(R.drawable.banner4);
         list_title.add("张韶涵世界巡回演唱会");
         list_title.add("TaylorSwift");
         list_title.add("Kris新歌");
@@ -146,8 +139,6 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
                 .setOnBannerListener(this)
                 //必须最后调用的方法，启动轮播图。
                 .start();
-
-
     }
     /**
      * 通过文件名获取资源id 例子：getResId("icon", R.drawable.class);

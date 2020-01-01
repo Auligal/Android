@@ -1,7 +1,9 @@
 package com.example.android.Wode;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -25,6 +27,7 @@ import com.example.android.Wode.recy2.IconAdapter2;
 import com.example.android.Wode.recy3.Icon3;
 import com.example.android.Wode.recy3.IconAdapter3;
 import com.example.android.cloudvileage.cloudvillegActivity;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,13 +50,6 @@ public class WoDeActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
             switch (item.getItemId()){
-//                    case R.id.mine:
-//                        Toast.makeText(WoDeActivity.this,"mine",Toast.LENGTH_SHORT).show();
-//                        break;
-//                    case R.id.find:
-////                        Intent intent = new Intent(WoDeActivity.this,);
-//                        Toast.makeText(WoDeActivity.this,"跳转发现页面",Toast.LENGTH_SHORT).show();
-//                        break;
             }
             return false;
             }
@@ -113,6 +109,29 @@ public class WoDeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //侧边栏
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.home);
+        DrawerLayout drawer;drawer = findViewById(R.id.drawer_layout);
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+//                switch (menuItem.getItemId()){
+//                    case R.id.beifen:
+//                        new Post_DataBase_Data_Task().execute("http://192.168.43.187/receive_file.php");
+//                        break;
+//                    case R.id.recover:
+//                        new Get_DataBase_Data_Task().execute("http://192.168.43.187/data.json");
+//                        break;
+//                    case R.id.download:
+//                        startActivity( new Intent(Activity_JiZhang.this, DownloadActivity.class));
+//                        break;
+//                }
+//                drawer.closeDrawers();
+//                return true;
+//            }
+//        });
     }
     private void init(){
         for (int i=0;i<5;i++) {

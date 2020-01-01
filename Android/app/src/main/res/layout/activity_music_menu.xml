@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
-    tools:context=".Wode.MusicMenuActivity">
+    tools:context=".Wode.MusicMenu.MusicMenuActivity">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -20,7 +20,7 @@
             <ImageView
                 android:id="@+id/image_view"
                 android:layout_width="match_parent"
-                android:layout_height="270dp"
+                android:layout_height="290dp"
                 android:scaleType="centerCrop"
                 android:src = "@color/gray"
                 app:layout_collapseMode="parallax" />
@@ -130,18 +130,17 @@
                 android:id="@+id/toolbar"/>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
-    <ScrollView
-        android:id="@+id/swipe_refresh"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="600dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dongtai_Recyclerview"
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-    </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view_bottom"
         android:layout_width="match_parent"

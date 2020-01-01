@@ -12,8 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.android.R;
-import com.example.android.Wode.MusicMenuActivity;
-import com.example.android.Wode.WoDeActivity;
+import com.example.android.Wode.MusicMenu.MusicMenuActivity;
 
 import java.util.List;
 

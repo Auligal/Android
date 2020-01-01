@@ -26,8 +26,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Wode.MusicMenuActivity"
-            android:label="歌单"></activity>
+        <activity android:name=".Wode.MusicMenu.MusicMenuActivity"
+            android:label=""></activity>
         <activity android:name=".cloudvileage.cloudvillegActivity">
 
         </activity>

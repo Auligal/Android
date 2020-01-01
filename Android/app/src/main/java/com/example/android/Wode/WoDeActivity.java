@@ -19,6 +19,7 @@ import com.example.android.Wode.recy2.Icon2;
 import com.example.android.Wode.recy2.IconAdapter2;
 import com.example.android.Wode.recy3.Icon3;
 import com.example.android.Wode.recy3.IconAdapter3;
+import com.example.android.cloudvileage.cloudvillegActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -101,6 +102,14 @@ public class WoDeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WoDeActivity.this, FaXianActivity.class);
+                startActivity(intent);
+            }
+        });
+        TextView cloudvellage = findViewById(R.id.cloudvell_title);
+        cloudvellage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WoDeActivity.this, cloudvillegActivity.class);
                 startActivity(intent);
             }
         });

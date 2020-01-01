@@ -36,24 +36,29 @@
                         android:id="@+id/mine_title"
                         android:text="@string/mine"
                         android:layout_marginTop="2dp"
-                        android:layout_marginStart="110dp"
-
+                        android:layout_marginStart="95dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/find_title"
                         android:text="@string/find"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginStart="34dp"
-                        android:textSize="18dp"
                         android:textStyle="bold"
-                        />
+                        android:textSize="18dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="34dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cloudvell_title"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/yuncun"
+                        android:layout_marginStart="34dp"/>
                     <ImageView
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:src="@drawable/search"
-                        android:layout_marginStart="110dp"
+                        android:layout_marginStart="80dp"
                         android:layout_gravity="start"/>
                 </LinearLayout>
             </androidx.appcompat.widget.Toolbar>

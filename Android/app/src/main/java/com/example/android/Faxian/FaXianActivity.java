@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.android.R;
 import com.example.android.Wode.WoDeActivity;
+import com.example.android.cloudvileage.cloudvillegActivity;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.Transformer;
@@ -76,6 +77,14 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(FaXianActivity.this, WoDeActivity.class);
+                startActivity(intent);
+            }
+        });
+        TextView cloudvellage = findViewById(R.id.cloudvell_title);
+        cloudvellage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FaXianActivity.this, cloudvillegActivity.class);
                 startActivity(intent);
             }
         });

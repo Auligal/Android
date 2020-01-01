@@ -26,17 +26,24 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.HolderView> {
     @NonNull
     @Override
     public HolderView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.icon_item4,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.icon_item4,parent,false);
         return new HolderView(view,context);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HolderView holder, int position) {
+    public void onBindViewHolder(@NonNull HolderView holder, final int position) {
         Icon icon = list.get(position);
         holder.no.setText(String.valueOf(icon.getNum()));
         holder.name.setText(icon.getName());
         holder.author.setText(icon.getSingername());
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, BofangActivity.class);
+                intent.putExtra("music",String.valueOf(position));
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -54,13 +61,13 @@ public class IconAdapter extends RecyclerView.Adapter<IconAdapter.HolderView> {
             no = itemView.findViewById(R.id.music_no);
             name = itemView.findViewById(R.id.music_name);
             author = itemView.findViewById(R.id.music_author);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(context, BofangActivity.class);
-                    context.startActivity(intent);
-                }
-            });
+//            itemView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(context, BofangActivity.class);
+//                    context.startActivity(intent);
+//                }
+//            });
         }
     }
 }

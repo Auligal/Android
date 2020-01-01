@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
-    <!--原来是android:theme="@style/AppTheme.NoActionBar"-->
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo2"
@@ -19,6 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".login.LoginActivity"></activity>
         <activity android:name=".Welcome.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,19 +26,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Wode.MusicMenu.MusicMenuActivity"
-            android:label=""></activity>
-        <activity android:name=".cloudvileage.cloudvillegActivity">
-
-        </activity>
-        <activity android:name=".Faxian.FaXianActivity"></activity>
-        <activity android:name=".Wode.WoDeActivity"></activity>
+        <activity
+            android:name=".Wode.MusicMenu.MusicMenuActivity"
+            android:label="" />
+        <activity android:name=".cloudvileage.cloudvillegActivity"></activity>
+        <activity android:name=".Faxian.FaXianActivity" />
+        <activity android:name=".Wode.WoDeActivity" />
         <activity android:name=".Bofang.BofangActivity">
-<!--                        <intent-filter>-->
-<!--                            <action android:name="android.intent.action.MAIN" />-->
-<!--                            <category android:name="android.intent.category.LAUNCHER" />-->
-<!--                        </intent-filter>-->
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
+        <activity
+            android:name=".login.ActivityLogin"
+            android:label="登录" />
     </application>
 
 </manifest>

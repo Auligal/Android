@@ -27,6 +27,8 @@ import com.example.android.Wode.recy2.IconAdapter2;
 import com.example.android.Wode.recy3.Icon3;
 import com.example.android.Wode.recy3.IconAdapter3;
 import com.example.android.cloudvileage.cloudvillegActivity;
+import com.example.android.login.ActivityLogin;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
@@ -109,29 +111,11 @@ public class WoDeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         //侧边栏
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.home);
-        DrawerLayout drawer;drawer = findViewById(R.id.drawer_layout);
-//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-//            @Override
-//            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-//                switch (menuItem.getItemId()){
-//                    case R.id.beifen:
-//                        new Post_DataBase_Data_Task().execute("http://192.168.43.187/receive_file.php");
-//                        break;
-//                    case R.id.recover:
-//                        new Get_DataBase_Data_Task().execute("http://192.168.43.187/data.json");
-//                        break;
-//                    case R.id.download:
-//                        startActivity( new Intent(Activity_JiZhang.this, DownloadActivity.class));
-//                        break;
-//                }
-//                drawer.closeDrawers();
-//                return true;
-//            }
-//        });
+        DrawerLayout drawer;
+        drawer = findViewById(R.id.drawer_layout);
     }
     private void init(){
         for (int i=0;i<5;i++) {

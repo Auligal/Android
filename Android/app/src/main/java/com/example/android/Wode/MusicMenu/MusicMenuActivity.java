@@ -32,8 +32,6 @@ public class MusicMenuActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         IconAdapter adapter = new IconAdapter(list,MusicMenuActivity.this);
         recyclerView.setAdapter(adapter);
-
-
     }
 
     @Override

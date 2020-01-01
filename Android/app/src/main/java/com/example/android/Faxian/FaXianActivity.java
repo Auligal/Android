@@ -125,7 +125,7 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         banner.setImageLoader(new MyLoader());
         //设置图片网址或地址的集合
         banner.setImages(list_path);
-        //设置轮播的动画效果，内含多种特效，可点入方法内查找后内逐一体验
+        //设置轮播的动画效果
         banner.setBannerAnimation(Transformer.Default);
         //设置轮播图的标题集合
         banner.setBannerTitles(list_title);
@@ -173,6 +173,7 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
     static {
         mList = new ArrayList<>();
 
+        //板块一标题
         for (int i = 0; i < 1; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_TITLE;
@@ -184,11 +185,35 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         for (int i = 0; i < 6; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_GRID_THREE;
-            music.imageId = R.drawable.ys;
-            music.title = "且随疾风前行，身后亦需留心";
+            if(i==0){
+                music.imageId = R.drawable.p1_1;
+                music.title = "JJ林俊杰新歌速递";
+            }
+            else if(i==1){
+                music.imageId = R.drawable.p1_2;
+                music.title = "前方是迷途";
+            }
+            else if(i==2){
+                music.imageId = R.drawable.p1_3;
+                music.title = "快来周董这儿听歌啦";
+            }
+            else if(i==3){
+                music.imageId = R.drawable.p1_4;
+                music.title = "你看看我";
+            }
+            else if(i==4){
+                music.imageId = R.drawable.p1_5;
+                music.title = "我看看你";
+            }
+            else if(i==5){
+                music.imageId = R.drawable.p1_6;
+                music.title = "找不到出口";
+            }
             mList.add(music);
         }
 
+
+        //板块二标题
         for (int i = 0; i < 1; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_TITLE;
@@ -200,42 +225,104 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         for (int i = 0; i < 4; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_GRID_TWO;
-            music.imageId = R.drawable.zjl;
-            music.title = "这是你的告白气球吗";
+            if(i==0){
+                music.imageId = R.drawable.p2_1;
+                music.title = "经典英语歌曲";
+            }
+            else if(i==1){
+                music.imageId = R.drawable.p2_2;
+                music.title = "八度空间";
+            }
+            else if(i==2){
+                music.imageId = R.drawable.p2_3;
+                music.title = "潘玮柏";
+            }
+            else if(i==3){
+                music.imageId = R.drawable.p2_4;
+                music.title = "Phoenix";
+            }
             mList.add(music);
         }
 
+        //板块三标题
         for (int i = 0; i < 1; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_TITLE;
             music.imageId = R.drawable.yl;
-            music.title = "听了心情会变好的欢快古风小调";
+            music.title = "海贼王经典曲目";
             mList.add(music);
         }
 
         for (int i = 0; i < 3; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_LIST;
-            music.imageId = R.drawable.hzw;
-            music.title = "海贼王经典曲目";
+            if(i==0){
+                music.imageId = R.drawable.p3_1;
+                music.title = "黄金岛";
+            }
+            else if(i==1){
+                music.imageId = R.drawable.p3_2;
+                music.title = "和之国";
+            }
+            else if(i==2){
+                music.imageId = R.drawable.p3_3;
+                music.title = "我要成为海贼王";
+            }
             mList.add(music);
         }
 
+        //板块四标题
         for (int i = 0; i < 1; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_TITLE;
             music.imageId = R.drawable.ljj;
-            music.title = "你听过吗";
+            music.title = "许嵩专场，你听过吗";
             mList.add(music);
         }
 
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < 9; i++) {
             Music music = new Music();
             music.type = Music.TYPE.TYPE_GRID_THREE;
-            music.imageId = R.drawable.ljj;
-            music.title = "[BGM]一定听过的神级背景配乐";
+            if(i==0){
+                music.imageId = R.drawable.p4_1;
+                music.title = "不如吃茶去";
+            }
+            else if(i==1){
+                music.imageId = R.drawable.p4_2;
+                music.title = "幻听";
+            }
+            else if(i==2){
+                music.imageId = R.drawable.p4_3;
+                music.title = "青年晚报";
+            }
+            else if(i==3){
+                music.imageId = R.drawable.p4_4;
+                music.title = "雅俗共赏";
+            }
+            else if(i==4){
+                music.imageId = R.drawable.p4_5;
+                music.title = "断桥残雪";
+            }
+            else if(i==5){
+                music.imageId = R.drawable.p4_6;
+                music.title = "庐州月";
+            }
+            else if(i==6){
+                music.imageId = R.drawable.p4_7;
+                music.title = "千古";
+            }
+            else if(i==7){
+                music.imageId = R.drawable.p4_8;
+                music.title = "七夕";
+            }
+            else if(i==8){
+                music.imageId = R.drawable.p4_9;
+                music.title = "玫瑰花的葬礼";
+            }
             mList.add(music);
         }
+
+
     }
     //点击事件，暂时用不到
 

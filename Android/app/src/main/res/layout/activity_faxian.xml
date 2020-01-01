@@ -195,20 +195,13 @@
                     android:text="@string/faxian_gdgc"
                     android:textSize="13dp" />
 
-                <GridView
-                    android:id="@+id/gridview_tjgd"
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/faxian_ry"
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
+                    android:layout_height="match_parent"
                     android:layout_marginTop="400dp"
-
-                    />
-
-                <com.google.android.material.bottomappbar.BottomAppBar
-                    android:layout_width="match_parent"
-                    android:layout_height="59dp"
-                    android:layout_marginBottom="0dp">
-
-                </com.google.android.material.bottomappbar.BottomAppBar>
+                    android:background="#FFFFFF" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

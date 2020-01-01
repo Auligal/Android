@@ -10,10 +10,13 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.android.R;
@@ -37,39 +40,49 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
    // private ArrayList<String> list_path;
     private ArrayList<Integer> list_path = new ArrayList<>();
     private ArrayList<String> list_title;
+
     //推荐歌单GridView
-    private GridView gview;
-    private List<Map<String, Object>> data_list;
-    private SimpleAdapter sim_adapter;
-    // 图片封装为一个数组
-    private int[] icon = { R.drawable.dzq, R.drawable.ys, R.drawable.ljj,
-            R.drawable.zjl, R.drawable.yl, R.drawable.hzw};
-    private String[] iconName = {
-            "[华语速爆新歌]最新华语音乐推荐",
-            "且随疾风前行，身后亦需留心",
-            "回忆杀系列",
-            "这是你的告白气球吗",
-            "听了心情会变好的欢快古风小调",
-            "海贼王经典曲目"
-    };
+    private RecyclerView ry;
+    private GridLayoutManager layoutManager;
+    private RecyclerAdapter mAdapter;
+    private static List<Music> mList;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_faxian);
+        //轮播图初始化
         initView();
-        gview = (GridView) findViewById(R.id.gridview_tjgd);
-        //新建List
-        data_list = new ArrayList<Map<String, Object>>();
-        //获取数据
-        data_list = getData();
-        //新建适配器
-        String [] from ={"image","text"};
-        int [] to = {R.id.image,R.id.text};
-        sim_adapter = new SimpleAdapter(this, data_list, R.layout.item_tjgd, from, to);
-        //配置适配器
-        gview.setAdapter(sim_adapter);
+
+        //recycelview
+        ry = (RecyclerView) findViewById(R.id.faxian_ry);
+        layoutManager = new GridLayoutManager(this, 6);
+        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                int type = mList.get(position).type;
+                if (type == Music.TYPE.TYPE_GRID_THREE) {
+                    return 2;
+                } else if (type == Music.TYPE.TYPE_GRID_TWO) {
+                    return 3;
+                } else if (type == Music.TYPE.TYPE_LIST) {
+                    return 6;
+                } else if (type == Music.TYPE.TYPE_TITLE) {
+                    return 6;
+                }
+                return 0;
+            }
+        });
+        ry.setLayoutManager(layoutManager);
+        ry.addItemDecoration(new SpacesItemDecoration(2));
+
+        // 填充数据
+        mAdapter = new RecyclerAdapter(this, mList);
+//        mAdapter.setOnItemClickListener((OnItemClickListener) this);
+        ry.setAdapter(mAdapter);
 
         //toolbar顶部跳转设置
         TextView mine_title = findViewById(R.id.mine_title);
@@ -161,16 +174,84 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         }
     }
 
-    public List<Map<String, Object>> getData(){
-        //cion和iconName的长度是相同的，这里任选其一都可以
-        for(int i=0;i<icon.length;i++){
-            Map<String, Object> map = new HashMap<String, Object>();
-            map.put("image", icon[i]);
-            map.put("text", iconName[i]);
-            data_list.add(map);
+
+    /**
+     * 模拟本地数据
+     */
+    static {
+        mList = new ArrayList<>();
+
+        for (int i = 0; i < 1; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_TITLE;
+            music.imageId = R.drawable.dzq;
+            music.title = "[华语速爆新歌]最新华语音乐推荐";
+            mList.add(music);
         }
 
-        return data_list;
+        for (int i = 0; i < 6; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_GRID_THREE;
+            music.imageId = R.drawable.ys;
+            music.title = "且随疾风前行，身后亦需留心";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 1; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_TITLE;
+            music.imageId = R.drawable.ljj;
+            music.title = "回忆杀系列";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 4; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_GRID_TWO;
+            music.imageId = R.drawable.zjl;
+            music.title = "这是你的告白气球吗";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 1; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_TITLE;
+            music.imageId = R.drawable.yl;
+            music.title = "听了心情会变好的欢快古风小调";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 3; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_LIST;
+            music.imageId = R.drawable.hzw;
+            music.title = "海贼王经典曲目";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 1; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_TITLE;
+            music.imageId = R.drawable.ljj;
+            music.title = "你听过吗";
+            mList.add(music);
+        }
+
+        for (int i = 0; i < 6; i++) {
+            Music music = new Music();
+            music.type = Music.TYPE.TYPE_GRID_THREE;
+            music.imageId = R.drawable.ljj;
+            music.title = "[BGM]一定听过的神级背景配乐";
+            mList.add(music);
+        }
     }
+    //点击事件，暂时用不到
+
+    public void OnItemClick(int position) {
+        String title = mList.get(position).title;
+        Toast.makeText(this, title, Toast.LENGTH_SHORT).show();
+    }
+
+
 
 }

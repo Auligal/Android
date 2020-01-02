@@ -69,6 +69,9 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
                 if (type == Music.TYPE.TYPE_GRID_THREE) {
                     return 2;
                 } else if (type == Music.TYPE.TYPE_GRID_TWO) {
+
+
+
                     return 3;
                 } else if (type == Music.TYPE.TYPE_LIST) {
                     return 6;

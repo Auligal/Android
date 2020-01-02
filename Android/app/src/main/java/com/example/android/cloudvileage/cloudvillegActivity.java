@@ -33,8 +33,10 @@ public class cloudvillegActivity extends AppCompatActivity {
         recyclerView2.setAdapter(iconAdapter2);
         MyLinearLayoutManager layoutManager = new MyLinearLayoutManager(this);
         MyLinearLayoutManager layoutManager2 = new MyLinearLayoutManager(this);
+        //设置里面的不能滑动
         layoutManager.setScrollEnabled(false);
         layoutManager2.setScrollEnabled(false);
+
         recyclerView.setLayoutManager(layoutManager);
         recyclerView2.setLayoutManager(layoutManager2);
 

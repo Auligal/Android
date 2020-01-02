@@ -58,13 +58,13 @@ public class BofangActivity extends AppCompatActivity implements View.OnClickLis
             super.handleMessage(msg);
             jindutiaoSb.setProgress(msg.what);
             currentTv.setText(formatTime(msg.what));
-
         }
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bofang);
+
         backIv = findViewById(R.id.last);
         nextIv = findViewById(R.id.next);
         discsmap = findViewById(R.id.changpian);
@@ -196,7 +196,6 @@ public class BofangActivity extends AppCompatActivity implements View.OnClickLis
             while (mediaPlayer != null && isStop == false) {
                 // 将SeekBar位置设置到当前播放位置
                 handler.sendEmptyMessage(mediaPlayer.getCurrentPosition());
-                Log.i("WYJ", String.valueOf(mediaPlayer.getCurrentPosition()));
                 try {
                     // 每100毫秒更新一次位置
                     Thread.sleep(100);

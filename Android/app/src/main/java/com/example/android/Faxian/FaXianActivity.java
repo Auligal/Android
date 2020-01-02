@@ -119,7 +119,7 @@ public class FaXianActivity extends AppCompatActivity implements OnBannerListene
         list_title.add("TaylorSwift");
         list_title.add("Kris新歌");
         list_title.add("陈奕迅-明报");
-        //设置内置样式，共有六种可以点入方法内逐一体验使用。
+        //设置内置样式
         banner.setBannerStyle(BannerConfig.CIRCLE_INDICATOR_TITLE_INSIDE);
         //设置图片加载器，图片加载器在下方
         banner.setImageLoader(new MyLoader());
